@@ -1,0 +1,7 @@
+name: Whitelister
+version: 1.0.0
+main: com.nexh.wh.Main
+commands:
+  wh:
+    aliases: [ whitelister, white ]
+    description: Main command for whitelister.
