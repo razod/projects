@@ -1,0 +1,4 @@
+module.exports = {
+    mongo: 'ur mongodb uri',
+    port: '3000' || process.env.PORT
+}
