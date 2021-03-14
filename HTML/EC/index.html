@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/simplelightbox.min.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://kit.fontawesome.com/63ff00b443.js" crossorigin="anonymous"></script>
+    <title>EarCandy - Earphones</title>
+</head>
+<body id="home">
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">EarCandy</h1>
+            <ul class="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Showcase -->
+    <section class="section-a">
+        <div class="container">
+            <div>
+                <h1>Earphones of the Future</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nulla aliquid esse assumenda atque nam totam qui consequatur nemo veniam.</p>
+                <a href="#" class="btn rm">Read More</a>
+            </div>
+            <img src="dist/img/airpods1.jpeg">
+        </div>
+    </section>
+
+    <!-- Section -->
+    <section id="about" class="section-b">
+        <div class="overlay">
+            <div class="section-b-inner">
+                <h3>Loud & Clear</h3>
+                <h2>Music The Way It Should Be</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At alias ipsum culpa veniam quibusdam ad quis deserunt nam placeat laborum!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section-c">
+        <div class="gallery">
+             <a href="dist/img/airpods1.jpeg" class="big"><img src="dist/img/airpods1.jpeg" alt=""></a>
+             <a href="dist/img/airpods2.jpg" class="big"><img src="dist/img/airpods2.jpg" alt=""></a>
+             <a href="dist/img/airpods3.jpg" class="big"><img src="dist/img/airpods3.jpg" alt=""></a>
+             <a href="dist/img/airpods4.jpg" class="big"><img src="dist/img/airpods4.jpg" alt=""></a>
+             <a href="dist/img/airpods5.jpeg" class="big"><img src="dist/img/airpods5.jpeg" alt=""></a>
+        </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="section-d">
+        <div>
+            <div class="section-d-inner">
+                <h3>available 12.30</h2>
+                <h2>coming soon</h2>
+                <ul>
+                        <li><span id="days"></span>days</li>
+                        <li><span id="hours"></span>hours</li>
+                        <li><span id="minutes"></span>minutes</li>
+                        <li><span id="seconds"></span>seconds</li>
+                      </ul>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer -->
+        <footer class="section-footer py-4 bg-primary">
+            <div class="container">
+              <div>
+                <h2 class="text-2 mb-1">Lorem ipsum dolor sit.</h2>
+                <a href="http://twitter.com">
+                  <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="http://facebook.com">
+                  <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="http://youtube.com">
+                  <i class="fab fa-youtube fa-2x"></i>
+                </a>
+              </div>
+              <div>
+                <h3>Company Info</h3>
+                <ul>
+                  <li><a href="#">All Products</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3>Blog Posts</h3>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor.</a></li>
+                  <li><a href="#">Lorem ipsum dolor.</a></li>
+                  <li><a href="#">Lorem ipsum dolor.</a></li>
+                  <li><a href="#">Lorem ipsum dolor.</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3>Social Media</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+          </footer>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="dist/js/simple-lightbox.min.js"></script>
+    <script src="dist/js/countdown.js"></script>
+    <script>
+        $(function() {
+            const $gallery = $('.gallery a').simpleLightbox();
+        });
+    </script>
+</body>
+</html>
