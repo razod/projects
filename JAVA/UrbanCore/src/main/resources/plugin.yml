@@ -1,0 +1,30 @@
+name: UrbanCore
+main: me.razod.core.Main
+version: 1.0.0
+commands:
+  mutechat:
+    aliases: [ mc, togglechat, tc ]
+    description: Mute global chat.
+  clearchat:
+    aliases: [ cc, chatclear ]
+    description: Clear game chat.
+  ban:
+    aliases: [ banplayer, bp ]
+    description: Permanently ban a player from joining the server.
+  kick:
+    aliases: [ kickplayer, kp ]
+    description: Kick a player off of your server.
+
+permissions:
+  uc.*:
+    description: Gives permission to all the UrbanCore commands.
+  uc.mute:
+    description: Gives permission to use the mute command and to mute global chat.
+  uc.mute.bypass:
+    description: Gives permission to bypass the global chat mute.
+  uc.clearchat:
+    description: Gives permission to clear chat.
+  uc.kick:
+    description: Gives permission to kick players.
+  uc.ban:
+    description: Gives permission to ban players.
