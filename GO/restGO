@@ -1,0 +1,45 @@
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"log"
+	"net/http"
+
+	"github.com/gorilla/mux"
+)
+
+// Article ...
+type Article struct {
+	Title   string `json:"Title"`
+	Desc    string `json:"desc"`
+	Content string `json:"content"`
+}
+
+// Articles ...
+type Articles []Article
+
+func allArticles(w http.ResponseWriter, r *http.Request) {
+	articles := Articles{
+		Article{Title: "Lorem ipsum", Desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec dictum massa.", Content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec dictum massa. Proin vitae eleifend felis, in ultrices nisl. Nullam cursus, erat nec tincidunt porttitor, felis ligula bibendum tortor, eget pharetra metus nunc nec massa. Integer ultricies ex id est dictum blandit ac sed arcu. Vestibulum at tortor arcu. Sed iaculis pellentesque purus, sed tincidunt augue hendrerit id. Aliquam erat volutpat. Curabitur pulvinar rhoncus ipsum, vitae vestibulum nunc blandit sit amet. Ut sollicitudin tempus tellus, quis accumsan risus consectetur eget."},
+		Article{Title: "Hello World", Desc: "Stuff", Content: "Article Content"},
+	}
+	json.NewEncoder(w).Encode(articles)
+}
+
+func homePage(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "homepage endpoint hit")
+}
+
+func handleRequests() {
+
+	router := mux.NewRouter().StrictSlash(true)
+
+	router.HandleFunc("/", homePage)
+	router.HandleFunc("/articles", allArticles).Methods("GET")
+	log.Fatal(http.ListenAndServe(":8081", router))
+}
+
+func main() {
+	handleRequests()
+}
